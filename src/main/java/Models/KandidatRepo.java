@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class KandidatRepo {
     List<Kandidat> kandidats = new ArrayList<>();
-    Map<String, Kandidat> kandidatList = new HashMap<>();
+    public Map<String, Kandidat> kandidatList = new HashMap<>();
 
     public void addKandidat(Kandidat kandidat){
         kandidats.add(kandidat);

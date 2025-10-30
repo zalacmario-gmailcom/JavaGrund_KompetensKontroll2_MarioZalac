@@ -4,8 +4,10 @@ import Models.Kandidat;
 import Models.KandidatFact;
 import Models.KandidatRepo;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
 
 public class MenuTest {
 
@@ -19,8 +21,7 @@ public class MenuTest {
         kandidatRepo.addKandidat(kandidat);
 
         // Assert
-        assertEquals(1, kandidatRepo.showKandidat().size());
-        assertEquals("Mario", kandidatRepo.showKandidat().get(0).getName());
+        assertEquals("Mario", kandidatRepo.kandidatList.get("Mario").getName());
     }
 
     @Test
@@ -33,7 +34,6 @@ public class MenuTest {
         kandidatRepo.addKandidat(kandidat);
 
         // Assert
-        assertEquals(1, kandidatRepo.showKandidat().size());
-        assertEquals("Mario", kandidatRepo.showKandidat().get(0).getName());
+        assertEquals("Mario", kandidatRepo.kandidatList.get("Mario").getName());
     }
 }
