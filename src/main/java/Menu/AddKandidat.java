@@ -38,7 +38,6 @@ public class AddKandidat implements Entry {
 
         Kandidat newKandidat = kandidatFact.kandidatFactory(name, yearsOld, branch, yearsExperience);
         kandidatRepo.addKandidat(newKandidat);
-
         System.out.println("Kandidat tillagd");
     }
 }
