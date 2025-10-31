@@ -2,6 +2,7 @@ package Filter;
 
 import Models.Kandidat;
 import Models.KandidatRepo;
+import Exception.FilteredKandidatNotFound;
 
 import java.util.List;
 
@@ -19,9 +20,14 @@ public class ExperienceFilter implements Filter <Integer>{
 
     @Override
     public List<Kandidat> filter(int yearsExperience){
-        return kandidatRepo.getAllKandidater()
+        List<Kandidat> filtered = kandidatRepo.getAllKandidater()
                 .stream()
                 .filter(k -> k.getYearsExperience() == yearsExperience)
                 .toList();
+
+        if (filtered.isEmpty()) {
+            throw new FilteredKandidatNotFound("Inmatade år av erfaranhet hittas inte");
+        }
+        return filtered;
     }
 }

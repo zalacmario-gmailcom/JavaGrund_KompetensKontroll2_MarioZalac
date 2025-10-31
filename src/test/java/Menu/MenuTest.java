@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 public class MenuTest {
-
     @Test
     public void testAddKandidat_WhenValidInput_ThenAddKandidat() {
         // Arrange

@@ -2,6 +2,7 @@ package Filter;
 
 import Models.Kandidat;
 import Models.KandidatRepo;
+import Exception.FilteredKandidatNotFound;
 
 import java.util.List;
 
@@ -19,9 +20,14 @@ public class BranchFilter implements Filter <String>{
 
     @Override
     public List<Kandidat> filter(String branch) {
-        return kandidatRepo.getAllKandidater()
+        List<Kandidat> filtered = kandidatRepo.getAllKandidater()
                 .stream()
                 .filter(k -> k.getBranch().equalsIgnoreCase(branch))
                 .toList();
+
+        if (filtered.isEmpty()) {
+            throw new FilteredKandidatNotFound("Inmatade yrke hittas inte");
+        }
+        return filtered;
     }
 }
