@@ -13,7 +13,7 @@ public class RemoveKandidat implements Entry {
 
     @Override
     public String description() {
-        return "Remove a candidate";
+        return "Ta bort kandidat";
     }
 
     @Override

@@ -31,15 +31,15 @@ public class KandidatRepo {
     }
 
     public KandidatRepo(){
-        addKandidat(new Kandidat("Anna Andersson", 28, "IT", 5));
-        addKandidat(new Kandidat("Erik Berg", 32, "Ekonomi", 8));
-        addKandidat(new Kandidat("Maria Carlsson", 25, "IT", 3));
-        addKandidat(new Kandidat("Johan Dahl", 35, "HR", 10));
-        addKandidat(new Kandidat("Lisa Eriksson", 29, "Marknadsföring", 6));
-        addKandidat(new Kandidat("Anders Fredriksson", 31, "IT", 7));
-        addKandidat(new Kandidat("Sofia Gran", 27, "Ekonomi", 4));
-        addKandidat(new Kandidat("Mikael Holm", 33, "HR", 9));
-        addKandidat(new Kandidat("Emma Johansson", 26, "Marknadsföring", 3));
-        addKandidat(new Kandidat("Peter Karlsson", 30, "IT", 6));
+        addKandidat(new Kandidat("Anna", 28, "IT", 5));
+        addKandidat(new Kandidat("Erik", 32, "Ekonomi", 8));
+        addKandidat(new Kandidat("Maria", 25, "IT", 3));
+        addKandidat(new Kandidat("Johan", 35, "HR", 10));
+        addKandidat(new Kandidat("Lisa", 29, "Marknadsföring", 6));
+        addKandidat(new Kandidat("Anders", 31, "IT", 7));
+        addKandidat(new Kandidat("Sofia", 27, "Ekonomi", 4));
+        addKandidat(new Kandidat("Mikael", 33, "HR", 9));
+        addKandidat(new Kandidat("Emma", 26, "Marknadsföring", 3));
+        addKandidat(new Kandidat("Peter", 30, "IT", 6));
     }
 }

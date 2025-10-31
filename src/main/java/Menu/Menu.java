@@ -1,6 +1,8 @@
 package Menu;
 
+import Filter.AlphabeticFilter;
 import Filter.BranchFilter;
+import Filter.ExperienceFilter;
 import Models.KandidatFact;
 import Models.KandidatRepo;
 
@@ -17,6 +19,9 @@ public class Menu {
     private final ShowKandidat showKandidat;
     private final FilterKandidat filterKandidat;
     private final BranchFilter branchFilter;
+    private final ExperienceFilter experienceFilter;
+    private final AlphabeticFilter alphabeticFilter;
+    private final ExitMenu exitMenu;
 
     public Menu() {
         this.kandidatRepo = new KandidatRepo();
@@ -25,12 +30,16 @@ public class Menu {
         this.removeKandidat = new RemoveKandidat(kandidatRepo);
         this.showKandidat = new ShowKandidat(kandidatRepo);
         this.branchFilter = new BranchFilter(kandidatRepo);
-        this.filterKandidat = new FilterKandidat(kandidatRepo, branchFilter);
+        this.experienceFilter = new ExperienceFilter(kandidatRepo);
+        this.alphabeticFilter = new AlphabeticFilter(kandidatRepo);
+        this.filterKandidat = new FilterKandidat(branchFilter, experienceFilter, alphabeticFilter);
+        this.exitMenu = new ExitMenu();
 
-        menuDescription.put("1", new AddKandidat(kandidatRepo, kandidatFact));
-        menuDescription.put("2", new RemoveKandidat(kandidatRepo));
-        menuDescription.put("3", new ShowKandidat(kandidatRepo));
-        menuDescription.put("4", new FilterKandidat(kandidatRepo, branchFilter));
+        menuDescription.put("1", addKandidat);
+        menuDescription.put("2", removeKandidat);
+        menuDescription.put("3", showKandidat);
+        menuDescription.put("4", filterKandidat);
+        menuDescription.put("0", exitMenu);
     }
 
     public void showMenu() {
@@ -46,7 +55,7 @@ public class Menu {
                 case "2" -> removeKandidat.execute();
                 case "3" -> showKandidat.execute();
                 case "4" -> filterKandidat.execute();
-                case "0" -> scanner.close();
+                case "0" -> exitMenu.execute();
                 default -> System.out.println("Ogiltigt val. Försök igen.");
             }
         }

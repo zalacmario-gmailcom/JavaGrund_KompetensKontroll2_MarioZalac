@@ -32,12 +32,12 @@ public class Kandidat {
     @Override
     public String toString() {
         return "Kandidat: "
-                + "[name: "
-                + name + ", years old: "
+                + "[Namn: "
+                + name + ", år gammal: "
                 + yearsOld
                 + ", branch: "
                 + branch
-                + ", years of experience: "
+                + ", år erfarenhet: "
                 + yearsExperience
                 + "]";
     }

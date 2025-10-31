@@ -11,7 +11,7 @@ public class ShowKandidat implements Entry {
 
     @Override
     public String description() {
-        return "Show candidates";
+        return "Visa kandidates";
     }
 
     @Override

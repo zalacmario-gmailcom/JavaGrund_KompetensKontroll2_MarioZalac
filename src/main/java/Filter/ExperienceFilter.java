@@ -5,23 +5,23 @@ import Models.KandidatRepo;
 
 import java.util.List;
 
-public class BranchFilter implements Filter <String>{
+public class ExperienceFilter implements Filter <Integer>{
     private final KandidatRepo kandidatRepo;
 
-    public BranchFilter(KandidatRepo kandidatRepo) {
+    public ExperienceFilter(KandidatRepo kandidatRepo){
         this.kandidatRepo = kandidatRepo;
     }
 
     @Override
-    public List<Kandidat> filter(int yearsExperience) {
+    public List<Kandidat> filter(Integer parameter) {
         return List.of();
     }
 
     @Override
-    public List<Kandidat> filter(String branch) {
+    public List<Kandidat> filter(int yearsExperience){
         return kandidatRepo.getAllKandidater()
                 .stream()
-                .filter(k -> k.getBranch().equalsIgnoreCase(branch))
+                .filter(k -> k.getYearsExperience() == yearsExperience)
                 .toList();
     }
 }
