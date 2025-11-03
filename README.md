@@ -1,5 +1,5 @@
 Promt: 
-If use different classes for filters and interface to be able to have OCP. Now after adding seccond class that uses Integer as input I get eror. My frist class uses String as input. 
+If use different classes for filters and interface to be able to have OCP. Now after adding second class that uses Integer as input I get error. My first class uses String as input. 
 What would you do in interface, this is how it looks. 
 public interface Filter{ 
     List<Kandidat> filter(); 
