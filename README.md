@@ -1,3 +1,6 @@
+Denna promt är inte så fin men jag fick liknande svar som första gång. Eftersom jag fick hjälp då jag skapade uppgift och mina promt sparas inte fick jag göra om. 
+
+
 Promt: 
 If use different classes for filters and interface to be able to have OCP. Now after adding second class that uses Integer as input I get error. My first class uses String as input. 
 What would you do in interface, this is how it looks. 
