@@ -29,24 +29,24 @@ public class FilterKandidat implements Entry {
 
     @Override
     public void execute() {
-        while (true){
-        System.out.println("Filtrera efter:");
-        System.out.println("1: Branch");
-        System.out.println("2: År av erfarenhet");
-        System.out.println("3: Alfabetiskt");
-        System.out.println("0: Exit");
+        while (true) {
+            System.out.println("Filtrera efter:");
+            System.out.println("1: Branch");
+            System.out.println("2: År av erfarenhet");
+            System.out.println("3: Alfabetiskt");
+            System.out.println("0: Exit");
 
-        Scanner scanner = new Scanner(System.in);
-        String chooise = scanner.nextLine();
+            Scanner scanner = new Scanner(System.in);
+            String chooise = scanner.nextLine();
 
-            switch (chooise){
+            switch (chooise) {
                 case "1":
-                        System.out.println("Skriv yrke:");
-                        String branch = scanner.nextLine();
+                    System.out.println("Skriv yrke:");
+                    String branch = scanner.nextLine();
 
                     try {
-                        for (Kandidat kandidat : branchFilter.filter(branch)){
-                               System.out.println(kandidat);
+                        for (Kandidat kandidat : branchFilter.filter(branch)) {
+                            System.out.println(kandidat);
                         }
                     } catch (FilteredKandidatNotFound e) {
                         logger.warn(e.getMessage());
@@ -57,7 +57,7 @@ public class FilterKandidat implements Entry {
                     try {
                         System.out.println("Skriv antal år erfarenhet:");
                         int yearsExperience = Integer.parseInt(scanner.nextLine());
-                        for (Kandidat kandidat : experienceFilter.filter(yearsExperience)){
+                        for (Kandidat kandidat : experienceFilter.filter(yearsExperience)) {
                             System.out.println(kandidat);
                         }
                     } catch (NumberFormatException e) {
@@ -69,7 +69,7 @@ public class FilterKandidat implements Entry {
 
                 case "3":
                     try {
-                        for (Kandidat kandidat : alphabeticFilter.filter("")){
+                        for (Kandidat kandidat : alphabeticFilter.filter("")) {
                             System.out.println(kandidat);
                         }
                     } catch (FilteredKandidatNotFound e) {
@@ -80,7 +80,7 @@ public class FilterKandidat implements Entry {
                 case "0":
                     return;
 
-                default :
+                default:
                     System.out.println("Ogiltigt val. Försök igen.");
                     break;
             }

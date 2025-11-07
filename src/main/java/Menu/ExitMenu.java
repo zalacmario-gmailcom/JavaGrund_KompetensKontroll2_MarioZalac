@@ -1,6 +1,6 @@
 package Menu;
 
-public class ExitMenu implements Entry{
+public class ExitMenu implements Entry {
     @Override
     public String description() {
         return "Avsluta";

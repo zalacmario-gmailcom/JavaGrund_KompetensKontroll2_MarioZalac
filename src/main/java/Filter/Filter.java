@@ -1,6 +1,7 @@
 package Filter;
 
 import Models.Kandidat;
+
 import java.util.List;
 
 /*ChatGPT hjälp
@@ -16,7 +17,7 @@ List<Kandidat> filter();
 }
 
 till denna här*/
-public interface Filter <T>{
+public interface Filter<T> {
     List<Kandidat> filter(T parameter);
 
     List<Kandidat> filter(int yearsExperience);

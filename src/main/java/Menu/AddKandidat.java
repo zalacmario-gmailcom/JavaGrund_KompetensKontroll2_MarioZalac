@@ -28,23 +28,23 @@ public class AddKandidat implements Entry {
         Scanner scanner = new Scanner(System.in);
 
         try {
-        System.out.println("Skriv namn: ");
-        String name = scanner.nextLine();
+            System.out.println("Skriv namn: ");
+            String name = scanner.nextLine();
 
-        System.out.println("Skriv ålder: ");
-        int yearsOld = Integer.parseInt(scanner.nextLine());
-        if (yearsOld < 0) {
-            throw new IllegalArgumentException();
-        }
+            System.out.println("Skriv ålder: ");
+            int yearsOld = Integer.parseInt(scanner.nextLine());
+            if (yearsOld < 0) {
+                throw new IllegalArgumentException();
+            }
 
-        System.out.println("Skriv yrke:");
-        String branch = scanner.nextLine();
+            System.out.println("Skriv yrke:");
+            String branch = scanner.nextLine();
 
-        System.out.println("Skriv antal år erfarenhet: ");
-        int yearsExperience = Integer.parseInt(scanner.nextLine());
-        if (yearsExperience < 0) {
-            throw new IllegalArgumentException();
-        }
+            System.out.println("Skriv antal år erfarenhet: ");
+            int yearsExperience = Integer.parseInt(scanner.nextLine());
+            if (yearsExperience < 0) {
+                throw new IllegalArgumentException();
+            }
 
             if (name.isEmpty() || yearsOld < 0 || branch.isEmpty() || yearsExperience < 0) {
                 throw new IllegalArgumentException();
@@ -55,8 +55,7 @@ public class AddKandidat implements Entry {
 
         } catch (NumberFormatException e) {
             logger.error("Ålder och erfarenhet måste vara ett nummer");
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             logger.warn("Va vänlig och fyll i alla värde");
         }
     }

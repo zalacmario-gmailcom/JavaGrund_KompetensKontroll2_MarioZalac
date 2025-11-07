@@ -6,7 +6,7 @@ import Exception.FilteredKandidatNotFound;
 
 import java.util.List;
 
-public class AlphabeticFilter implements Filter <String> {
+public class AlphabeticFilter implements Filter<String> {
     private final KandidatRepo kandidatRepo;
 
     public AlphabeticFilter(KandidatRepo kandidatRepo) {
@@ -22,7 +22,7 @@ public class AlphabeticFilter implements Filter <String> {
     public List<Kandidat> filter(String name) {
         List<Kandidat> filtered = kandidatRepo.getAllKandidater()
                 .stream()
-                .sorted((k1,k2) -> k1.getName().compareTo(k2.getName()))
+                .sorted((k1, k2) -> k1.getName().compareTo(k2.getName()))
                 .toList();
 
         if (filtered.isEmpty()) {

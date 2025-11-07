@@ -41,10 +41,10 @@ public class FilterTest {
         // Arrange
         KandidatRepo kandidatRepo = new KandidatRepo();
         AlphabeticFilter alphabeticFilter = new AlphabeticFilter(kandidatRepo);
-        
+
         // Act
         List<Kandidat> sortedKandidater = alphabeticFilter.filter("");
-        
+
         // Assert
         assertEquals("Anders", sortedKandidater.get(0).getName());
     }

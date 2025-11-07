@@ -21,7 +21,7 @@ public class ShowKandidat implements Entry {
     @Override
     public void execute() {
         kandidatRepo.showKandidat();
-        if(kandidatRepo.kandidatList.isEmpty()){
+        if (kandidatRepo.kandidatList.isEmpty()) {
             logger.info("Inga kandidater att visa");
         }
     }

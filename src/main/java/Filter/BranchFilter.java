@@ -6,7 +6,7 @@ import Exception.FilteredKandidatNotFound;
 
 import java.util.List;
 
-public class BranchFilter implements Filter <String>{
+public class BranchFilter implements Filter<String> {
     private final KandidatRepo kandidatRepo;
 
     public BranchFilter(KandidatRepo kandidatRepo) {

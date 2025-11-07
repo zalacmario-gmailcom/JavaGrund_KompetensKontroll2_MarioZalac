@@ -43,14 +43,14 @@ public class Menu {
     }
 
     public void showMenu() {
-        while (true){
+        while (true) {
             menuDescription.forEach((key, value) ->
                     System.out.println(key + ": " + value.description()));
 
             Scanner scanner = new Scanner(System.in);
             String chooise = scanner.nextLine();
 
-            switch (chooise){
+            switch (chooise) {
                 case "1" -> addKandidat.execute();
                 case "2" -> removeKandidat.execute();
                 case "3" -> showKandidat.execute();

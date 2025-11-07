@@ -26,11 +26,11 @@ public class RemoveKandidat implements Entry {
         System.out.println("Skriv namn:");
         String name = scanner.nextLine();
 
-       if(!kandidatRepo.kandidatList.containsKey(name)){
-           logger.info("Kandidat finns inte");
-       }else{
-           kandidatRepo.removeKandidat(name);
-           System.out.println("Kandidat borttagen");
-       }
+        if (!kandidatRepo.kandidatList.containsKey(name)) {
+            logger.info("Kandidat finns inte");
+        } else {
+            kandidatRepo.removeKandidat(name);
+            System.out.println("Kandidat borttagen");
+        }
     }
 }

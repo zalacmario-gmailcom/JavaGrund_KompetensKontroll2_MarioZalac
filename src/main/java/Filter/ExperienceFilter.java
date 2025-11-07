@@ -6,10 +6,10 @@ import Exception.FilteredKandidatNotFound;
 
 import java.util.List;
 
-public class ExperienceFilter implements Filter <Integer>{
+public class ExperienceFilter implements Filter<Integer> {
     private final KandidatRepo kandidatRepo;
 
-    public ExperienceFilter(KandidatRepo kandidatRepo){
+    public ExperienceFilter(KandidatRepo kandidatRepo) {
         this.kandidatRepo = kandidatRepo;
     }
 
@@ -19,7 +19,7 @@ public class ExperienceFilter implements Filter <Integer>{
     }
 
     @Override
-    public List<Kandidat> filter(int yearsExperience){
+    public List<Kandidat> filter(int yearsExperience) {
         List<Kandidat> filtered = kandidatRepo.getAllKandidater()
                 .stream()
                 .filter(k -> k.getYearsExperience() == yearsExperience)
